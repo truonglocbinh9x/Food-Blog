@@ -19,4 +19,8 @@ export default class PageDetector {
   get isPostListPage () {
     return this.route.path === '/posts'
   }
+
+  get isPostDetailPage () {
+    return this.route.name === 'PostDetail'
+  }
 }

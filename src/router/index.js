@@ -4,6 +4,9 @@ import Home from '@/pages/HomePage'
 import About from '@/pages/AboutPage'
 import Contact from '@/pages/ContactPage'
 import PostList from '@/pages/PostListPage'
+import PostDetail from '@/pages/PostDetailPage'
+import NotFound from '@/pages/NotFoundPage'
+import ErrorPage from '@/pages/ErrorPage'
 
 Vue.use(Router)
 
@@ -25,9 +28,24 @@ const router = new Router({
       component: PostList
     },
     {
+      path: '/posts/:id',
+      name: 'PostDetail',
+      component: PostDetail
+    },
+    {
       path: '/contact',
       name: 'Contact',
       component: Contact
+    },
+    {
+      path: '/error',
+      name: 'Error',
+      component: ErrorPage
+    },
+    {
+      path: '*',
+      name: 'NotFound',
+      component: NotFound
     }
   ],
   mode: 'history'
