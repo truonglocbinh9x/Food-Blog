@@ -28,48 +28,7 @@
                 <button type="submit" class="btn">Subscribe</button>
               </form>
             </div>
-            <div class="single-gd tech-btm">
-              <h4>Top stories of the week</h4>
-              <div class="blog-grids">
-                <div class="blog-grid-left">
-                  <a href="single.html">
-                    <img src="@/assets/images/b5.jpg" class="img-fluid" alt>
-                  </a>
-                </div>
-                <div class="blog-grid-right">
-                  <h5>
-                    <a href="single.html">Pellentesque dui, non felis. Maecenas male</a>
-                  </h5>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="blog-grids mt-4">
-                <div class="blog-grid-left">
-                  <a href="single.html">
-                    <img src="@/assets/images/b6.jpg" class="img-fluid" alt>
-                  </a>
-                </div>
-                <div class="blog-grid-right">
-                  <h5>
-                    <a href="single.html">Pellentesque dui, non felis. Maecenas male</a>
-                  </h5>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-              <div class="blog-grids mt-4">
-                <div class="blog-grid-left">
-                  <a href="single.html">
-                    <img src="@/assets/images/b7.jpg" class="img-fluid" alt>
-                  </a>
-                </div>
-                <div class="blog-grid-right">
-                  <h5>
-                    <a href="single.html">Pellentesque dui, non felis. Maecenas male</a>
-                  </h5>
-                </div>
-                <div class="clearfix"></div>
-              </div>
-            </div>
+            <top-history />
             <div class="single-gd">
               <h4>List group</h4>
               <ul class="list-group">
@@ -155,10 +114,12 @@
 <script>
 import Post from "@/components/Post"
 import Paginate from 'vuejs-paginate'
-import axios from "axios";
-
+import TopHistory from '@/components/TopHistory'
+// import axios from "axios";
+import getPosts from '@/utils/actions'
 export default {
   components: {
+    TopHistory,
     Post,
     Paginate
   },
@@ -174,22 +135,24 @@ export default {
     }
   },
   methods: {
-    getPosts() {
-      const url = "http://localhost:4000/api/v1/posts";
-      axios
-        .get(url)
-        .then(res => {
-          this.posts = res.data.posts
-          this.totalPage = res.data.total_page
-        })
-        .catch(err => console.log(err));
-    },
+    // getPosts() {
+    //   const url = "http://localhost:4000/api/v1/posts";
+    //   axios
+    //     .get(url)
+    //     .then(res => {
+    //       this.posts = res.data.posts
+    //       this.totalPage = res.data.total_page
+    //     })
+    //     .catch(err => console.log(err));
+    // },
     changePage (pageNum) {
       this.$router.push(`/posts?page=${pageNum}`)
     }
   },
-  created() {
-    this.getPosts();
+  async created() {
+    const data = await getPosts()
+    this.posts = data.posts
+    this.totalPage = data.total_page
   }
 };
 </script>

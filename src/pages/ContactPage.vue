@@ -46,24 +46,29 @@
           </div>
           <div class="col-lg-6 mt-lg-0 mt-5">
             <div class="w3pvt-webinfo_mail_grid_right">
-              <form action="#" method="post">
+              <div>
+                <p v-if="errors.length">
+                  <b>Please correct the following error(s):</b>
+                  <ul>
+                    <li v-for="error in errors" class="error">{{ error }}</li>
+                  </ul>
+                </p>
                 <div class="form-group">
-                  <input type="text" name="Name" class="form-control" placeholder="Name" required>
+                  <input type="text" v-model="contact.name" class="form-control" placeholder="Name*">
                 </div>
                 <div class="form-group">
                   <input
                     type="email"
-                    name="Email"
+                    v-model="contact.email"
                     class="form-control"
-                    placeholder="Email"
-                    required
+                    placeholder="Email*"
                   >
                 </div>
                 <div class="form-group">
-                  <textarea name="Message" placeholder="Message......." required></textarea>
+                  <textarea v-model="contact.message" placeholder="Message.......*"></textarea>
                 </div>
-                <button type="submit" class="btn">Submit</button>
-              </form>
+                <button @click="submit" class="btn">Submit</button>
+              </div>
             </div>
           </div>
         </div>
@@ -82,3 +87,66 @@
     <!-- //map -->
   </div>
 </template>
+<script>
+import axios from 'axios'
+export default {
+  data () {
+    return {
+      errors: [],
+      contact: {
+        name: '',
+        email: '',
+        message: ''
+      }
+    }
+  },
+  methods: {
+    submit () {
+      this.errors = []
+      const contact = this.contact
+      if (!contact.name) {
+        this.errors.push('Name is required.')
+      }
+
+      if (!contact.email) {
+        this.errors.push('Email is required.')
+      }
+
+      if (!this.validEmail(contact.email)) {
+        this.errors.push('Email is invalid.')
+      }
+
+      if (!contact.message) {
+        this.errors.push('Message is required.')
+      }
+
+      if (this.errors.length < 1) {
+        const url = "http://localhost:4000/api/v1/contacts";
+        axios
+          .post(url, {contact: this.contact})
+          .then(res => {
+            this.contact = {
+              name: '',
+              email: '',
+              message: ''
+            }
+            alert('Thank you for your response. We will contact with you later.')
+          })
+          .catch(err => console.log(err));
+      } else {
+        return
+      }
+    },
+    validEmail (email) {
+      var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      return re.test(email);
+    }
+  }
+}
+</script>
+<style>
+.error {
+  color: red;
+  list-style-type: none;
+}
+</style>
