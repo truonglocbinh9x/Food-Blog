@@ -20,6 +20,7 @@
 
 <script>
 import Post from '@/components/Post'
+import { getPost } from '@/utils/actions'
 export default {
   components: {
     Post
@@ -29,21 +30,11 @@ export default {
       post: {}
     }
   },
-  methods: {
-    getPost () {
-      const url = `http://localhost:4000/api/v1/posts/${this.$route.params.id}`
-        this.$http.get(url)
-          .then(res => {
-            if (!res.data) return
-            this.post = res.data
-          })
-          .catch(err => {
-            this.$router.push('/error')
-          })
-    }
-  },
-  mounted() {
-    this.getPost()
+  async mounted() {
+    const postId = this.$route.params.id
+    const postDetail = await getPost(postId)
+    if (postDetail) this.post = postDetail
+    return this.$router.push('/not-found')
   }
 };
 </script>

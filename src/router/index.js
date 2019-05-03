@@ -45,6 +45,7 @@ const router = new Router({
     {
       path: '*',
       name: 'NotFound',
+      meta: { layout: 'no-sidebar' },
       component: NotFound
     }
   ],

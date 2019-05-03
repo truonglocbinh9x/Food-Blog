@@ -116,7 +116,7 @@ import Post from "@/components/Post"
 import Paginate from 'vuejs-paginate'
 import TopHistory from '@/components/TopHistory'
 // import axios from "axios";
-import getPosts from '@/utils/actions'
+import { getPosts } from '@/utils/actions'
 export default {
   components: {
     TopHistory,
@@ -135,24 +135,21 @@ export default {
     }
   },
   methods: {
-    // getPosts() {
-    //   const url = "http://localhost:4000/api/v1/posts";
-    //   axios
-    //     .get(url)
-    //     .then(res => {
-    //       this.posts = res.data.posts
-    //       this.totalPage = res.data.total_page
-    //     })
-    //     .catch(err => console.log(err));
-    // },
+    async getPosts() {
+      const data = await getPosts(this.currentPage)
+      this.posts = data.posts
+      this.totalPage = data.total_page
+    },
     changePage (pageNum) {
-      this.$router.push(`/posts?page=${pageNum}`)
+      this.$router.replace(`/posts?page=${pageNum}`)
+      this.getPosts(pageNum)
     }
   },
-  async created() {
-    const data = await getPosts()
-    this.posts = data.posts
-    this.totalPage = data.total_page
+  mounted () {
+    this.getPosts()
   }
 };
 </script>
+<style>
+
+</style>

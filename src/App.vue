@@ -1,19 +1,19 @@
 <template>
   <div id="app">
-    <main-top />
-    <router-view></router-view>
-    <Footer />
+    <component :is="layout">
+      <router-view />
+    </component>
   </div>
 </template>
 
 <script>
-import MainTop from '@/components/MainTop'
-import Footer from '@/components/Footer.vue'
+const default_layout = 'default'
 export default {
   name: 'app',
-  components: {
-    Footer,
-    MainTop
+  computed: {
+    layout () {
+      return (this.$route.meta.layout || default_layout) + '-layout'
+    }
   }
 }
 </script>
