@@ -31,7 +31,6 @@ export default {
       axios
         .get(url)
         .then(res => {
-          console.log(res.data.posts)
           this.posts = res.data.posts
         })
         .catch(err => console.log(err));

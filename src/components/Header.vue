@@ -25,7 +25,7 @@
                 <router-link to="/posts">My Posts</router-link>
               </li>
               <li>
-                <a href="/contact" class="nav-style">Contact Us</a>
+                <router-link to="/contact">Contact Us</router-link>
               </li>
               <li>
                 <a href="https://w3layouts.com/" target="_blank" class="nav-button">Get Started</a>

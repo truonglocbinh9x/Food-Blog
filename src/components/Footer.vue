@@ -15,19 +15,13 @@
             <div class="col-md-8 w3l-footer text-md-right text-center mt-3">
               <ul class="list-unstyled footer-nav-wthree">
                 <li>
-                  <a href="index.html">Home</a>
+                  <a href="/">Home</a>
                 </li>
                 <li>
-                  <a href="about.html">About Us</a>
+                  <a href="/about">About Us</a>
                 </li>
                 <li>
-                  <a href="blog1.html">Blog Style 1</a>
-                </li>
-                <li>
-                  <a href="blog2.html">Blog style 2</a>
-                </li>
-                <li>
-                  <a class="btn-footer" href="contact.html">Contact Us</a>
+                  <a class="btn-footer" href="/contact">Contact Us</a>
                 </li>
               </ul>
             </div>
