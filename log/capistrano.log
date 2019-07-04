@@ -286,3 +286,272 @@ For more info visit https://webpack.js.org/guides/code-splitting/
   INFO [0ac2ccd7] Running /usr/bin/env echo "Branch master (at 526e175595b0e8a0cf19288d7b503aa14267d3f2) deployed as release 20190703091317 by truonglocbinh" >> /var/www/food-blog/revisions.log on 212.237.7.163
  DEBUG [0ac2ccd7] Command: cd /var/www/food-blog/releases && /usr/bin/env echo "Branch master (at 526e175595b0e8a0cf19288d7b503aa14267d3f2) deployed as release 20190703091317 by truonglocbinh" >> /var/www/food-blog/revisions.log
   INFO [0ac2ccd7] Finished in 1.021 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-04 11:58:45 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [e7ffa7dc] Running /usr/bin/env mkdir -p /tmp on 212.237.7.163
+ DEBUG [e7ffa7dc] Command: /usr/bin/env mkdir -p /tmp
+  INFO [e7ffa7dc] Finished in 4.919 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-food-blog-production-truonglocbinh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-food-blog-production-truonglocbinh.sh 100.0%
+  INFO [ec5e7b23] Running /usr/bin/env chmod 700 /tmp/git-ssh-food-blog-production-truonglocbinh.sh on 212.237.7.163
+ DEBUG [ec5e7b23] Command: /usr/bin/env chmod 700 /tmp/git-ssh-food-blog-production-truonglocbinh.sh
+  INFO [ec5e7b23] Finished in 0.913 seconds with exit status 0 (successful).
+  INFO [88f2b25f] Running /usr/bin/env git ls-remote git@github.com:truonglocbinh9x/Food-Blog.git HEAD on 212.237.7.163
+ DEBUG [88f2b25f] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-food-blog-production-truonglocbinh.sh" ; /usr/bin/env git ls-remote git@github.com:truonglocbinh9x/Food-Blog.git HEAD )
+ DEBUG [88f2b25f] 	ce848c986b5e1bf8e6904b8c2b5af9b7f138668a	HEAD
+  INFO [88f2b25f] Finished in 2.878 seconds with exit status 0 (successful).
+  INFO [e203d6c0] Running /usr/bin/env mkdir -p /var/www/food-blog/shared /var/www/food-blog/releases on 212.237.7.163
+ DEBUG [e203d6c0] Command: /usr/bin/env mkdir -p /var/www/food-blog/shared /var/www/food-blog/releases
+  INFO [e203d6c0] Finished in 0.815 seconds with exit status 0 (successful).
+  INFO [256797e2] Running /usr/bin/env mkdir -p /var/www/food-blog/shared on 212.237.7.163
+ DEBUG [256797e2] Command: /usr/bin/env mkdir -p /var/www/food-blog/shared
+  INFO [256797e2] Finished in 0.919 seconds with exit status 0 (successful).
+ DEBUG [9b7bb79b] Running [ -f /var/www/food-blog/shared/.env ] on 212.237.7.163
+ DEBUG [9b7bb79b] Command: [ -f /var/www/food-blog/shared/.env ]
+ DEBUG [9b7bb79b] Finished in 0.818 seconds with exit status 1 (failed).
+ ERROR linked file /var/www/food-blog/shared/.env does not exist on 212.237.7.163
+  INFO ---------------------------------------------------------------------------
+  INFO START 2019-07-04 11:59:58 +0700 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [bb3e7ff3] Running /usr/bin/env mkdir -p /tmp on 212.237.7.163
+ DEBUG [bb3e7ff3] Command: /usr/bin/env mkdir -p /tmp
+  INFO [bb3e7ff3] Finished in 3.499 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-food-blog-production-truonglocbinh.sh 0.0%
+  INFO Uploading /tmp/git-ssh-food-blog-production-truonglocbinh.sh 100.0%
+  INFO [3b7adb82] Running /usr/bin/env chmod 700 /tmp/git-ssh-food-blog-production-truonglocbinh.sh on 212.237.7.163
+ DEBUG [3b7adb82] Command: /usr/bin/env chmod 700 /tmp/git-ssh-food-blog-production-truonglocbinh.sh
+  INFO [3b7adb82] Finished in 0.658 seconds with exit status 0 (successful).
+  INFO [45a79c9d] Running /usr/bin/env git ls-remote git@github.com:truonglocbinh9x/Food-Blog.git HEAD on 212.237.7.163
+ DEBUG [45a79c9d] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-food-blog-production-truonglocbinh.sh" ; /usr/bin/env git ls-remote git@github.com:truonglocbinh9x/Food-Blog.git HEAD )
+ DEBUG [45a79c9d] 	ce848c986b5e1bf8e6904b8c2b5af9b7f138668a	HEAD
+  INFO [45a79c9d] Finished in 6.439 seconds with exit status 0 (successful).
+  INFO [6f48d962] Running /usr/bin/env mkdir -p /var/www/food-blog/shared /var/www/food-blog/releases on 212.237.7.163
+ DEBUG [6f48d962] Command: /usr/bin/env mkdir -p /var/www/food-blog/shared /var/www/food-blog/releases
+  INFO [6f48d962] Finished in 0.820 seconds with exit status 0 (successful).
+  INFO [20e45797] Running /usr/bin/env mkdir -p /var/www/food-blog/shared on 212.237.7.163
+ DEBUG [20e45797] Command: /usr/bin/env mkdir -p /var/www/food-blog/shared
+  INFO [20e45797] Finished in 0.714 seconds with exit status 0 (successful).
+ DEBUG [15241923] Running [ -f /var/www/food-blog/shared/.env ] on 212.237.7.163
+ DEBUG [15241923] Command: [ -f /var/www/food-blog/shared/.env ]
+ DEBUG [15241923] Finished in 0.717 seconds with exit status 0 (successful).
+ DEBUG [eaf5b0ac] Running [ -f /var/www/food-blog/current/REVISION ] on 212.237.7.163
+ DEBUG [eaf5b0ac] Command: [ -f /var/www/food-blog/current/REVISION ]
+ DEBUG [eaf5b0ac] Finished in 0.716 seconds with exit status 0 (successful).
+ DEBUG [94ef7acb] Running /usr/bin/env cat /var/www/food-blog/current/REVISION 2>/dev/null on 212.237.7.163
+ DEBUG [94ef7acb] Command: /usr/bin/env cat /var/www/food-blog/current/REVISION 2>/dev/null
+ DEBUG [94ef7acb] 	6071cc7b01078e92332dd06881330a9f57feb6d8
+ DEBUG [94ef7acb] Finished in 0.658 seconds with exit status 0 (successful).
+ DEBUG [6e5e388f] Running [ -f /var/www/food-blog/repo/HEAD ] on 212.237.7.163
+ DEBUG [6e5e388f] Command: [ -f /var/www/food-blog/repo/HEAD ]
+ DEBUG [6e5e388f] Finished in 0.659 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/food-blog/repo
+ DEBUG [1a393f9a] Running if test ! -d /var/www/food-blog/repo; then echo "Directory does not exist '/var/www/food-blog/repo'" 1>&2; false; fi on 212.237.7.163
+ DEBUG [1a393f9a] Command: if test ! -d /var/www/food-blog/repo; then echo "Directory does not exist '/var/www/food-blog/repo'" 1>&2; false; fi
+ DEBUG [1a393f9a] Finished in 0.826 seconds with exit status 0 (successful).
+  INFO [2e838b1c] Running /usr/bin/env git remote set-url origin git@github.com:truonglocbinh9x/Food-Blog.git on 212.237.7.163
+ DEBUG [2e838b1c] Command: cd /var/www/food-blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-food-blog-production-truonglocbinh.sh" ; /usr/bin/env git remote set-url origin git@github.com:truonglocbinh9x/Food-Blog.git )
+  INFO [2e838b1c] Finished in 0.739 seconds with exit status 0 (successful).
+  INFO [ef186c41] Running /usr/bin/env git remote update --prune on 212.237.7.163
+ DEBUG [ef186c41] Command: cd /var/www/food-blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-food-blog-production-truonglocbinh.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [ef186c41] 	Fetching origin
+ DEBUG [ef186c41] 	From github.com:truonglocbinh9x/Food-Blog
+ + 6071cc7...ce848c9 master     -> master  (forced update)
+  INFO [ef186c41] Finished in 2.764 seconds with exit status 0 (successful).
+ DEBUG [8ce00451] Running if test ! -d /var/www/food-blog/repo; then echo "Directory does not exist '/var/www/food-blog/repo'" 1>&2; false; fi on 212.237.7.163
+ DEBUG [8ce00451] Command: if test ! -d /var/www/food-blog/repo; then echo "Directory does not exist '/var/www/food-blog/repo'" 1>&2; false; fi
+ DEBUG [8ce00451] Finished in 0.689 seconds with exit status 0 (successful).
+  INFO [483b7e20] Running /usr/bin/env mkdir -p /var/www/food-blog/releases/20190704050014 on 212.237.7.163
+ DEBUG [483b7e20] Command: cd /var/www/food-blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-food-blog-production-truonglocbinh.sh" ; /usr/bin/env mkdir -p /var/www/food-blog/releases/20190704050014 )
+  INFO [483b7e20] Finished in 0.684 seconds with exit status 0 (successful).
+  INFO [374b1291] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/food-blog/releases/20190704050014 on 212.237.7.163
+ DEBUG [374b1291] Command: cd /var/www/food-blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-food-blog-production-truonglocbinh.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/food-blog/releases/20190704050014 )
+  INFO [374b1291] Finished in 0.712 seconds with exit status 0 (successful).
+ DEBUG [948edb46] Running if test ! -d /var/www/food-blog/repo; then echo "Directory does not exist '/var/www/food-blog/repo'" 1>&2; false; fi on 212.237.7.163
+ DEBUG [948edb46] Command: if test ! -d /var/www/food-blog/repo; then echo "Directory does not exist '/var/www/food-blog/repo'" 1>&2; false; fi
+ DEBUG [948edb46] Finished in 0.660 seconds with exit status 0 (successful).
+ DEBUG [fc2ff377] Running /usr/bin/env git rev-list --max-count=1 master on 212.237.7.163
+ DEBUG [fc2ff377] Command: cd /var/www/food-blog/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-food-blog-production-truonglocbinh.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [fc2ff377] 	ce848c986b5e1bf8e6904b8c2b5af9b7f138668a
+ DEBUG [fc2ff377] Finished in 0.656 seconds with exit status 0 (successful).
+ DEBUG [5fcff4e7] Running if test ! -d /var/www/food-blog/releases/20190704050014; then echo "Directory does not exist '/var/www/food-blog/releases/20190704050014'" 1>&2; false; fi on 212.237.7.163
+ DEBUG [5fcff4e7] Command: if test ! -d /var/www/food-blog/releases/20190704050014; then echo "Directory does not exist '/var/www/food-blog/releases/20190704050014'" 1>&2; false; fi
+ DEBUG [5fcff4e7] Finished in 0.656 seconds with exit status 0 (successful).
+  INFO [64f401c7] Running /usr/bin/env echo "ce848c986b5e1bf8e6904b8c2b5af9b7f138668a" > REVISION on 212.237.7.163
+ DEBUG [64f401c7] Command: cd /var/www/food-blog/releases/20190704050014 && /usr/bin/env echo "ce848c986b5e1bf8e6904b8c2b5af9b7f138668a" > REVISION
+  INFO [64f401c7] Finished in 0.658 seconds with exit status 0 (successful).
+  INFO [3153e08e] Running /usr/bin/env mkdir -p /var/www/food-blog/releases/20190704050014 on 212.237.7.163
+ DEBUG [3153e08e] Command: /usr/bin/env mkdir -p /var/www/food-blog/releases/20190704050014
+  INFO [3153e08e] Finished in 0.788 seconds with exit status 0 (successful).
+ DEBUG [c4949751] Running [ -L /var/www/food-blog/releases/20190704050014/.env ] on 212.237.7.163
+ DEBUG [c4949751] Command: [ -L /var/www/food-blog/releases/20190704050014/.env ]
+ DEBUG [c4949751] Finished in 0.715 seconds with exit status 1 (failed).
+ DEBUG [c3ed23f8] Running [ -f /var/www/food-blog/releases/20190704050014/.env ] on 212.237.7.163
+ DEBUG [c3ed23f8] Command: [ -f /var/www/food-blog/releases/20190704050014/.env ]
+ DEBUG [c3ed23f8] Finished in 0.707 seconds with exit status 1 (failed).
+  INFO [d587973f] Running /usr/bin/env ln -s /var/www/food-blog/shared/.env /var/www/food-blog/releases/20190704050014/.env on 212.237.7.163
+ DEBUG [d587973f] Command: /usr/bin/env ln -s /var/www/food-blog/shared/.env /var/www/food-blog/releases/20190704050014/.env
+  INFO [d587973f] Finished in 0.725 seconds with exit status 0 (successful).
+  INFO [60e700af] Running cd /var/www/food-blog/releases/20190704050014; yarn install; on 212.237.7.163
+ DEBUG [60e700af] Command: cd /var/www/food-blog/releases/20190704050014; yarn install;
+ DEBUG [60e700af] 	yarn install v1.16.0
+ DEBUG [60e700af] 	[1/4] Resolving packages...
+ DEBUG [60e700af] 	[2/4] Fetching packages...
+ DEBUG [60e700af] 	info fsevents@1.2.8: The platform "linux" is incompatible with this module.
+ DEBUG [60e700af] 	info "fsevents@1.2.8" is an optional dependency and failed compatibility check. Excluding it from installation.
+ DEBUG [60e700af] 	[3/4] Linking dependencies...
+ DEBUG [60e700af] 	[4/4] Building fresh packages...
+ DEBUG [60e700af] 	Done in 13.25s.
+  INFO [60e700af] Finished in 14.472 seconds with exit status 0 (successful).
+  INFO [6504554b] Running cd /var/www/food-blog/releases/20190704050014; yarn run build --production on 212.237.7.163
+ DEBUG [6504554b] Command: cd /var/www/food-blog/releases/20190704050014; yarn run build --production
+ DEBUG [6504554b] 	yarn run v1.16.0
+ DEBUG [6504554b] 	$ vue-cli-service build --production
+ DEBUG [6504554b] 	
+ DEBUG [6504554b] 	-  Building for production...
+ DEBUG [6504554b] 	 WARNING  Compiled with 6 warnings7:01:06 AM
+ DEBUG [6504554b] 	
+ DEBUG [6504554b] 	Module Warning (from ./node_modules/@vue/cli-plugin-eslint/node_modules/eslint-loader/index.js):
+error: Elements in iteration expect to have 'v-bind:key' directives (vue/require-v-for-key) at src/pages/ContactPage.vue:53:21:
+  51 |                   <b>Please correct the following error(s):</b>
+  52 |                   <ul>
+> 53 |                     <li v-for="error in errors" class="error">{{ error }}</li>
+     |                     ^
+  54 |                   </ul>
+  55 |                 </p>
+  56 |                 <div class="form-group">
+
+
+error: 'res' is defined but never used (no-unused-vars) at src/pages/ContactPage.vue:127:17:
+  125 |         axios
+  126 |           .post(url, {contact: this.contact})
+> 127 |           .then(res => {
+      |                 ^
+  128 |             this.contact = {
+  129 |               name: '',
+  130 |               email: '',
+
+
+error: Unexpected console statement (no-console) at src/pages/ContactPage.vue:135:25:
+  133 |             alert('Thank you for your response. We will contact with you later.')
+  134 |           })
+> 135 |           .catch(err => console.log(err));
+      |                         ^
+  136 |       } else {
+  137 |         return
+  138 |       }
+
+
+error: Unnecessary escape character: \[ (no-useless-escape) at src/pages/ContactPage.vue:141:26:
+  139 |     },
+  140 |     validEmail (email) {
+> 141 |       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      |                          ^
+  142 |       return re.test(email);
+  143 |     }
+  144 |   }
+
+
+error: Unnecessary escape character: \[ (no-useless-escape) at src/pages/ContactPage.vue:141:51:
+  139 |     },
+  140 |     validEmail (email) {
+> 141 |       var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+      |                                                   ^
+  142 |       return re.test(email);
+  143 |     }
+  144 |   }
+
+
+5 errors found.
+ DEBUG [6504554b] 	
+ DEBUG [6504554b] 	Module Warning (from ./node_modules/@vue/cli-plugin-eslint/node_modules/eslint-loader/index.js):
+error: Unexpected console statement (no-console) at src/components/TopHistory.vue:36:23:
+  34 |           this.posts = res.data.posts
+  35 |         })
+> 36 |         .catch(err => console.log(err));
+     |                       ^
+  37 |     }
+  38 |   },
+  39 |   created () {
+
+
+1 error found.
+ DEBUG [6504554b] 	
+ DEBUG [6504554b] 	Module Warning (from ./node_modules/@vue/cli-plugin-eslint/node_modules/eslint-loader/index.js):
+error: Unexpected console statement (no-console) at src/utils/actions.js:12:19:
+  10 |       return res.data
+  11 |     })
+> 12 |     .catch(err => console.log(err));
+     |                   ^
+  13 | }
+  14 | 
+  15 | export function getPost (postId) {
+
+
+error: Unexpected console statement (no-console) at src/utils/actions.js:23:7:
+  21 |     })
+  22 |     .catch(err => {
+> 23 |       console.log(err)
+     |       ^
+  24 |       return false
+  25 |     })
+  26 | }
+
+
+2 errors found.
+ DEBUG [6504554b] 	
+ DEBUG [6504554b] 	You may use special comments to disable some warnings.
+ DEBUG [6504554b] 	Use // eslint-disable-next-line to ignore the next line.
+ DEBUG [6504554b] 	Use /* eslint-disable */ to ignore all warnings in a file.
+ DEBUG [6504554b] 	 warning  
+ DEBUG [6504554b] 	
+ DEBUG [6504554b] 	asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  img/fontawesome-webfont.912ec66d.svg (434 KiB)
+ DEBUG [6504554b] 	
+ DEBUG [6504554b] 	 warning  
+ DEBUG [6504554b] 	
+ DEBUG [6504554b] 	entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (410 KiB)
+      js/chunk-vendors.ed1cc08c.js
+      css/app.fc83b3c6.css
+      js/app.237ebf5f.js
+
+ DEBUG [6504554b] 	
+ DEBUG [6504554b] 	 warning  
+ DEBUG [6504554b] 	
+ DEBUG [6504554b] 	webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+ DEBUG [6504554b] 	
+ DEBUG [6504554b] 	  File                                 Size               Gzipped
+
+  dist/js/chunk-vendors.ed1cc08c.js    163.86 KiB         56.48 KiB
+  dist/js/app.237ebf5f.js              51.31 KiB          16.89 KiB
+  dist/css/app.fc83b3c6.css            194.66 KiB         31.94 KiB
+
+  Images and other types of assets omitted.
+
+ DEBUG [6504554b] 	 DONE  Build complete. The dist directory is ready to be deployed.
+ DEBUG [6504554b] 	 INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+      
+ DEBUG [6504554b] 	Done in 24.36s.
+  INFO [6504554b] Finished in 25.393 seconds with exit status 0 (successful).
+  INFO [9525f84a] Running /usr/bin/env ln -s /var/www/food-blog/releases/20190704050014 /var/www/food-blog/releases/current on 212.237.7.163
+ DEBUG [9525f84a] Command: /usr/bin/env ln -s /var/www/food-blog/releases/20190704050014 /var/www/food-blog/releases/current
+  INFO [9525f84a] Finished in 0.683 seconds with exit status 0 (successful).
+  INFO [1f7c9538] Running /usr/bin/env mv /var/www/food-blog/releases/current /var/www/food-blog on 212.237.7.163
+ DEBUG [1f7c9538] Command: /usr/bin/env mv /var/www/food-blog/releases/current /var/www/food-blog
+  INFO [1f7c9538] Finished in 0.665 seconds with exit status 0 (successful).
+ DEBUG [a74d6b71] Running /usr/bin/env ls -x /var/www/food-blog/releases on 212.237.7.163
+ DEBUG [a74d6b71] Command: /usr/bin/env ls -x /var/www/food-blog/releases
+ DEBUG [a74d6b71] 	20190703091317	20190703093449	20190704050014
+ DEBUG [a74d6b71] Finished in 0.782 seconds with exit status 0 (successful).
+ DEBUG [3b702e30] Running if test ! -d /var/www/food-blog/releases; then echo "Directory does not exist '/var/www/food-blog/releases'" 1>&2; false; fi on 212.237.7.163
+ DEBUG [3b702e30] Command: if test ! -d /var/www/food-blog/releases; then echo "Directory does not exist '/var/www/food-blog/releases'" 1>&2; false; fi
+ DEBUG [3b702e30] Finished in 0.698 seconds with exit status 0 (successful).
+  INFO [f5761d83] Running /usr/bin/env echo "Branch master (at ce848c986b5e1bf8e6904b8c2b5af9b7f138668a) deployed as release 20190704050014 by truonglocbinh" >> /var/www/food-blog/revisions.log on 212.237.7.163
+ DEBUG [f5761d83] Command: cd /var/www/food-blog/releases && /usr/bin/env echo "Branch master (at ce848c986b5e1bf8e6904b8c2b5af9b7f138668a) deployed as release 20190704050014 by truonglocbinh" >> /var/www/food-blog/revisions.log
+  INFO [f5761d83] Finished in 0.660 seconds with exit status 0 (successful).

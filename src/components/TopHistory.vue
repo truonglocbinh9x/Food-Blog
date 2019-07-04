@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     getTopHistories () {
-      const url = "http://localhost:4000/api/v1/posts/top_stories";
+      const url = `${process.env.VUE_APP_BASE_API_URL}/api/v1/posts/top_stories`;
       axios
         .get(url)
         .then(res => {
